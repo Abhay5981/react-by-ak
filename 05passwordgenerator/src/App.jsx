@@ -21,7 +21,7 @@ const passwordRef = useRef(null)
       let char = Math.floor(Math.random()*str.length+1)
       pass += str.charAt(char);
     }
-    setPassword(pass)
+    setPassword(pass);
 
 
   }, [length, numberAllowed, charAllowed, setPassword])
@@ -32,13 +32,17 @@ const passwordRef = useRef(null)
     window.navigator.clipboard.writeText(password)
   }, [password])
 
-  useEffect(() => {
-    passwordGenerator()
-  }, [length, numberAllowed, charAllowed, passwordGenerator])
+  const handleClick = () =>{
+      passwordGenerator();
+  }
+
+  // useEffect(() => {
+  //   passwordGenerator()
+  // }, [length, numberAllowed, charAllowed, passwordGenerator])
 
   return ( 
     <>
-    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-700'>
+    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-700 mt-20'>
      <h1 className='text-4xl text-center text-white'>Password generator</h1> 
      <div className='flex  shadow overflow-hidden rounde-lg mb-4 mt-4 rounded-lg'>
       <input
@@ -62,7 +66,7 @@ const passwordRef = useRef(null)
         max={20}
         value={length}
          className='cursor-pointer'
-         onChange={(e) => {setLength(e.target.value)}}
+         onChange={(e) => {setLength(Number(e.target.value));}}
           />
           <label>Length: {length}</label>
       </div>
@@ -89,7 +93,13 @@ const passwordRef = useRef(null)
           <label htmlFor="characterInput">Characters</label>
       </div>
     </div>
+    <div className='flex items-center justify-center mt-3'>
+    <button type="button" className='bg-blue-800 p-2 rounded-2xl'
+    onClick={handleClick}
+    >Generate Password</button>
+    </div>
      </div>
+     
     </>
   )
 }
