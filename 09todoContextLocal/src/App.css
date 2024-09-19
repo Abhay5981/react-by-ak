@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
+}
+body{
+  background: #6CA0DC;
 }
 
 .logo {
