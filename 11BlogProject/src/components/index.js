@@ -7,7 +7,11 @@ import RTE from "./RTE"
 import Signup from './Signup'
 import Login from './Login'
 import PostForm from './post-form/PostForm'
-import Container from "./container/Container";
+import PostCard from "./PostCard"
+import AuthLayout from './AuthLayout'
+import Button from './Button'
+import Input from './Input'
+import Select from './Select'
 
 
 export {
@@ -20,7 +24,11 @@ export {
     Signup,
     Login,
     PostForm,
-    Container,
-    
+    Button,
+    PostCard,
+    AuthLayout, 
+    Input,
+    Select,
+
 
 }
