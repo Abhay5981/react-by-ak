@@ -40,7 +40,7 @@ const Header = () => {
   ]
   
   return (
-    <header className='py-4 shadow bg-gray-600 '>
+    <header className='py-4 shadow bg-gray-500 mr-5'>
       <Container>
         <nav className='flex'>
           <div className='mt-2 hover:text-blue-400'>
