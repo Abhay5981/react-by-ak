@@ -40,10 +40,10 @@ const Header = () => {
   ]
   
   return (
-    <header className='py-4 shadow bg-gray-600'>
+    <header className='py-4 shadow bg-gray-600 '>
       <Container>
         <nav className='flex'>
-          <div className='mr-4'>
+          <div className='mt-2 hover:text-blue-400'>
              <Link to='/'>
              <Logo  width=' 70px'/>
              </Link>
@@ -71,4 +71,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;

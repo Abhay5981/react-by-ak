@@ -1,20 +1,20 @@
 import React,{useId} from 'react'
 
 const Input = React.forwardRef( function Input({
-    lable, 
-    type ="text",
+    label, 
+    type = "text",
     className = "",
     ...props   
 }, ref){
     const id = useId()
 
     return (
-        <div className='w-full'>
-            {lable && <lable 
+        <div className='w-full text-left'>
+            {label && <label
             className="inline-block mb-1 pl-4"
             htmlFor = {id}>
-                {lable}
-            </lable>
+                {label}
+            </label>
             }
             <input
             type={type}
