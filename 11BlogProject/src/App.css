@@ -5,18 +5,7 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+
 
 @keyframes logo-spin {
   from {
@@ -39,4 +28,28 @@
 
 .read-the-docs {
   color: #0b09b9;
+}
+
+
+
+.logo-container {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0, 182, 255, 0.2), rgba(255, 0, 132, 0.2));
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.logo-container:hover {
+  background: linear-gradient(135deg, rgba(0, 182, 255, 0.4), rgba(255, 0, 132, 0.4));
+  transform: scale(1.1);
+}
+
+.logo-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-img:hover {
+  transform: rotate(360deg);
 }
