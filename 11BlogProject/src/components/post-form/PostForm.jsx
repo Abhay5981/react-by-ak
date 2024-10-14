@@ -21,33 +21,35 @@ export default function PostForm({ post }) {
     const submit = async (data) => {
         if (post) {
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
-
+    
             if (file) {
                 appwriteService.deleteFile(post.featuredImage);
             }
-
+    
             const dbPost = await appwriteService.updatePost(post.$id, {
                 ...data,
                 featuredImage: file ? file.$id : undefined,
             });
-
+    
             if (dbPost) {
                 navigate(`/post/${dbPost.$id}`);
             }
         } else {
-            const file = await appwriteService.uploadFile(data.image[0]);
-
+            // Ensure you provide the bucketId here
+            const file = await appwriteService.uploadFile(data.image[0], "your-bucket-id");
+    
             if (file) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
                 const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
-
+    
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
                 }
             }
         }
     };
+    
 
     const slugTransform = useCallback((value) => {
         if (value && typeof value === "string")
@@ -88,6 +90,7 @@ export default function PostForm({ post }) {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
                     }}
                 />
+                {/* Corrected RTE usage */}
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
             <div className="w-1/3 px-2">
