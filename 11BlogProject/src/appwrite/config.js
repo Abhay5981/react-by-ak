@@ -69,10 +69,6 @@ export class Service {
     }
 
     async getPost(slug) {
-
-    if(!slug){
-        throw new Error('Missing DocumnetId or Slug')
-    }
         try {
             return await this.databases.getDocument(
                 conf.appwriteDatabaseId,
@@ -130,7 +126,8 @@ export class Service {
     getFilePreview(fileId) {
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
-            fileId
+            fileId,
+            
         );
     }
 }
