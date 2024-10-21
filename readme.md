@@ -50,3 +50,25 @@
  8. 09todoContextLocal – A Todo app using context and local storage, with a custom icon.
  9. 10todoReduxToolkit – Todo app with state management using Redux Toolkit.
  10. 11BlogProject – A blog project featuring a background image.
+
+## Available Scripts
+    npm start – Starts the development server.
+    npm run build – Builds the app for production.
+## Deployment
+  You can easily deploy the project on Netlify or any other hosting platform that supports React. Here’s a quick guide to deploy on Netlify:
+
+1. Create a Netlify account.
+2. Install the Netlify CLI:
+   
+       npm install -g netlify-cli
+   
+3. Run the following command to deploy your project:
+
+        netlify deploy
+## Contributing
+  Contributions are welcome! If you have any suggestions or improvements, feel free to submit a pull request or open an issue.
+
+## License
+  This project is licensed under the MIT License.
+
+
