@@ -40,13 +40,13 @@
  ## Project Features
   This repository includes the following mini-projects:
   
-  01vitereact – Basic React setup using Vite.
-  02counter – Counter app demonstrating state management.
-  03tailwindprops – Exploring the use of Tailwind CSS with props in React.
-  04background changer – Changing background with context state management.
-  05passwordgenerator – A password generator app using context and local storage.
-  06currencyConvertor – A simple currency converter using context.
-  08minicontext – A small context API project for global state management.
-  09todoContextLocal – A Todo app using context and local storage, with a custom icon.
-  10todoReduxToolkit – Todo app with state management using Redux Toolkit.
-  11BlogProject – A blog project featuring a background image.
+ 1. 01vitereact – Basic React setup using Vite.
+ 2. 02counter – Counter app demonstrating state management.
+ 3. 03tailwindprops – Exploring the use of Tailwind CSS with props in React.
+ 4. 04background changer – Changing background with context state management.
+ 5. 05passwordgenerator – A password generator app using context and local storage.
+ 6. 06currencyConvertor – A simple currency converter using context.
+ 7. 08minicontext – A small context API project for global state management.
+ 8. 09todoContextLocal – A Todo app using context and local storage, with a custom icon.
+ 9. 10todoReduxToolkit – Todo app with state management using Redux Toolkit.
+ 10. 11BlogProject – A blog project featuring a background image.
